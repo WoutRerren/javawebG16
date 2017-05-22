@@ -109,13 +109,15 @@ public class AssessmentController
         
         List<Assessment> assessments = current.getAssessments();
         String text ="";
+        String[] vragen = {"enthousiasme en participatie:","ideeën aanbrengen:","inhouden correct en duidelijk kunnen uitleggen:"
+        ,"groep organiseren en sturen:","precisie en nauwkeurigheid:","afspraken respecteren:"};
         for(Assessment a:assessments)
         {
             text += "<li>" + a.getForCoursemember().getName()  + "</li>";
-            int teller = 1;
+            int teller = 0;
             for(Answer answer:a.getAnswers())
             {
-                text += "<li>" +"Vraag "+teller+" :     "+ answer.getAnswer() + "</li>";
+                text += "<li>" +vragen[teller]+"   "+ answer.getAnswer() + "</li>";
                 
                 teller++;
             }

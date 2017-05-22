@@ -65,10 +65,6 @@
             <p>
                 <input type="submit" value="save"/>           
             </p>
-            <p>
-                <input type="submit" value="confirm" />           
-            </p>
-
         </form:form>
     </body>
 </html>
