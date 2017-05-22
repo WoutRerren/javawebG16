@@ -9,12 +9,7 @@
         <title>Overzicht assessments</title>
     </head>
     <body>
-        <c:forEach var="item" items="${peers}">
-            <p>${item.voor.name}</p>
-            <c:forEach var="antw" items="${item.antwoorden}">
-                <p>  ${antw.antwoord}</p>
-            </c:forEach>
-
-        </c:forEach>
+        <h1>Overzicht</h1>
+     ${overview}
     </body>
 </html>

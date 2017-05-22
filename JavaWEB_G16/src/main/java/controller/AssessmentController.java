@@ -5,6 +5,7 @@
  */
 package controller;
 
+import domain.Answer;
 import domain.Assessment;
 import domain.AssessmentWrapper;
 import domain.Coursemember;
@@ -65,12 +66,24 @@ public class AssessmentController
         return "peerassessment";
     }
     
-    @RequestMapping(value = "/overzichtassesments", method = RequestMethod.GET)
-    public String overzichtAssesment(Model model, Principal principal) {
-        Coursemember current = coursememberDao.getByUsername(principal.getName());
- 
-        return "overzichtassesments";
-    }
+//    @RequestMapping(value = "/overzichtassesments", method = RequestMethod.GET)
+//    public String overzichtAssesment(Model model, Principal principal) {
+//        Coursemember current = coursememberDao.getByUsername(principal.getName());
+//        List<Assessment> assessments = current.getAssessments();
+//        String text ="";
+//        for(Assessment a:assessments)
+//        {
+//            text += "<li>" + a.getForCoursemember().getName()  + "</li>";
+//            for(Answer answer:a.getAnswers())
+//            {
+//                text += "<li>" + answer.getAnswer() + "</li>";
+//            }
+//        }
+//          model.addAttribute("overview", String.format("<ul>%s</ul>", text));
+// 
+//        
+//        return "overzichtassesments";
+//    }
 
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
@@ -93,6 +106,22 @@ public class AssessmentController
         }
         current.setAssessments(wrapper.getAssessments());
         coursememberDao.update(current);
+        
+        List<Assessment> assessments = current.getAssessments();
+        String text ="";
+        for(Assessment a:assessments)
+        {
+            text += "<li>" + a.getForCoursemember().getName()  + "</li>";
+            int teller = 1;
+            for(Answer answer:a.getAnswers())
+            {
+                text += "<li>" +"Vraag "+teller+" :     "+ answer.getAnswer() + "</li>";
+                
+                teller++;
+            }
+            text += "<li>"+"</li>";
+        }
+          model.addAttribute("overview", String.format("<ul>%s</ul>", text));
 
         return "overzichtassessments";
     }
