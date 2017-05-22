@@ -23,21 +23,21 @@ public class Answer implements Serializable {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
     
-    private String antwoord;
+    private String answer;
 
     public Answer() {
     }
 
-    public Answer(String antwoord) {
-        this.antwoord = antwoord;
+    public Answer(String answer) {
+        this.answer = answer;
     }
 
-    public String getAntwoord() {
-        return antwoord;
+    public String getAnswer() {
+        return answer;
     }
 
-    public void setAntwoord(String antwoord) {
-        this.antwoord = antwoord;
+    public void setAnswer(String answer) {
+        this.answer = answer;
     }
     
     
