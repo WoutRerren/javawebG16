@@ -1,0 +1,107 @@
+.error {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.msg {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+#login-box {
+    width: 300px;
+    padding: 20px;
+    margin: 50px auto;
+    background: #fff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+}
+#loginbody{
+    background-image: url(http://www.zorgnetwerktrento.be/sites/www.zorgnetwerktrento.be/files/styles/colorbox_large__1200x1200/public/media/jpg/68/1504_foto_trento_64.jpg?itok=f_aatcJU);
+    background-size:cover;
+}
+
+#loginbutton{
+    width:100%;
+    color:white;
+    background-color: skyblue;
+    border:none;
+    padding:8px;
+    margin-top:10px;
+}
+#logo{
+    margin:100px auto;
+    background-image:url(http://users.hogent.be/~530534jp/logo_giveaday-01.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 200px;
+}
+
+#logininput{
+    width: 95%;
+    padding:5px;
+}
+
+#table{
+    width:100%;
+}
+
+h3{
+    text-align: center;
+}
+#wrapper{
+    margin:100px auto;
+    width: 500px;
+    border: 1px solid black;
+}
+#menubar{
+    width: 100%;
+    height:30px;
+    color:white;
+    background-color: skyblue;
+    text-align: center;
+    vertical-align:central;
+}
+
+#gebruiker{
+    width: 100%;
+    height:30px;
+    background-color:dimgrey;
+    color:white;
+    text-align: left;
+    vertical-align: central;
+}
+
+#groep{
+    margin-top:20px;  
+}
+
+#logoutbutton{
+    color:white;
+    background-color: red;
+    border:none;
+    padding:8px;
+}
+
+#peer{
+    color:white;
+    background-color: skyblue;
+    border:none;
+    padding:8px;
+}
+
+#welcome{
+   background-image: url(https://cdn.shutterstock.com/shutterstock/videos/5898749/thumb/1.jpg);
+   background-size:cover;
+}
