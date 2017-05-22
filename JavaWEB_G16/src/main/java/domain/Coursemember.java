@@ -38,7 +38,7 @@ public class Coursemember implements Serializable {
     @OneToMany(cascade=CascadeType.ALL)
     private List<Assessment> assessments;
     private String name;
-    private Integer ingediend;
+    private Integer completed;
 
     public Coursemember() {
     }
@@ -81,12 +81,12 @@ public class Coursemember implements Serializable {
         this.name = name;
     }
 
-    public Integer getIngediend() {
-        return ingediend;
+    public Integer getCompleted() {
+        return completed;
     }
 
-    public void setIngediend(Integer ingediend) {
-        this.ingediend = ingediend;
+    public void setCompleted(Integer completed) {
+        this.completed = completed;
     }
      @Override
     public int hashCode() {
