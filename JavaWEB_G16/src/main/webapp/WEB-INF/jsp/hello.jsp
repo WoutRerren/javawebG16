@@ -10,17 +10,17 @@
         <div id="wrapper">
             <div id="menubar">${message}</div>
         <div id="gebruiker">Welkom, ${username}</div>
-        <div id="groep">Groep : ${groep}
+        <div id="groep">Groep : ${gbgroup}
             <h1>Cursists :</h1>
-        ${cursisten}
+        ${coursemembers}
         </div>
         <c:url var="logoutUrl" value="/logout"/>
         <c:choose>
             <c:when test="${ingediend == 1}">
-                <button id="peer" href="<c:url value="peerassesment.htm"/>">Bekijk peerassesment</button>
+                <button id="peer" href="<c:url value="peerassesment.htm"/>">Bekijk peerassessment</button>
             </c:when>
             <c:otherwise>
-                <button id="peer" href="<c:url value="peerassesment.htm"/>">+ Dien peerassesment in</button>
+                <button id="peer" href="<c:url value="peerassesment.htm"/>">+ Dien assessment in</button>
             </c:otherwise>
         </c:choose>
         <form action="${logoutUrl}" method="post">

@@ -26,7 +26,7 @@ public class JpaCoursememberDao extends GenericDaoJpa<Coursemember> implements C
     public Coursemember getByUsername(String username) {
         TypedQuery<Coursemember> query
                 = em.createNamedQuery(
-                        "Cursist.getByUsername", Coursemember.class);
+                        "Coursemember.getByUsername", Coursemember.class);
         query.setParameter(
                 "username", username);
         return query.getResultList().get(0);

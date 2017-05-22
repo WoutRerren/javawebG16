@@ -10,53 +10,53 @@
     </head>
     <body>
         <h1>PeerAssessment</h1>
-       <form:form method="POST" action="save.htm" modelAttribute="pw">
+       <form:form method="POST" action="save.htm" modelAttribute="wrapper">
            <table border="1"> 
                <tr>
                <p><h3>enthousiasme en participatie: </h3>
-                <c:forEach items="${pw.peerassesments}" var="peer" varStatus="status">
+                <c:forEach items="${wrapper.assessments}" var="peer" varStatus="status">
                     <p>${peer.voor.name}</p>
-                    <form:radiobuttons path="peerassesments[${status.index}].antwoorden[0].antwoord" items="${antwoorden}"/><br/>
+                    <form:radiobuttons path="peerassessments[${status.index}].answers[0].answer" items="${answers}"/><br/>
                 </c:forEach>           
             </p>
              </tr>
              <tr>
             <p><h3>ideeën aanbrengen: </h3>
-                <c:forEach items="${pw.peerassesments}" var="peer" varStatus="status">
+                <c:forEach items="${wrapper.assessments}" var="peer" varStatus="status">
                     <p>${peer.voor.name}</p>
-                    <form:radiobuttons path="peerassesments[${status.index}].antwoorden[1].antwoord" items="${antwoorden}"/><br/>
+                    <form:radiobuttons path="peerassessments[${status.index}].answers[1].answer" items="${answers}"/><br/>
                 </c:forEach>              
             </p>
              </tr>
              <tr>
             <p><h3>inhouden correct en duidelijk kunnen uitleggen:</h3>
-                <c:forEach items="${pw.peerassesments}" var="peer" varStatus="status">
+                <c:forEach items="${wrapper.peerassessments}" var="peer" varStatus="status">
                     <p>${peer.voor.name}</p>
-                    <form:radiobuttons path="peerassesments[${status.index}].antwoorden[2].antwoord" items="${antwoorden}"/><br/>
+                    <form:radiobuttons path="peerassessments[${status.index}].answers[2].answer" items="${answers}"/><br/>
                 </c:forEach>        
             </p>
              </tr>
              <tr>
             <p><h3>groep organiseren en sturen:</h3>
-                <c:forEach items="${pw.peerassesments}" var="peer" varStatus="status">
+                <c:forEach items="${wrapper.peerassessments}" var="peer" varStatus="status">
                     <p>${peer.voor.name}</p>
-                   <form:radiobuttons path="peerassesments[${status.index}].antwoorden[3].antwoord" items="${antwoorden}"/><br/>
+                   <form:radiobuttons path="peerassessments[${status.index}].answers[3].answer" items="${answers}"/><br/>
                 </c:forEach>        
             </p>
              </tr>
              <tr>
             <p>><h3>precisie en nauwkeurigheid:</h3>
-                <c:forEach items="${pw.peerassesments}" var="peer" varStatus="status">
+                <c:forEach items="${wrapper.assessments}" var="peer" varStatus="status">
                     <p>${peer.voor.name}</p>
-                    <form:radiobuttons path="peerassesments[${status.index}].antwoorden[4].antwoord" items="${antwoorden}"/><br/>
+                    <form:radiobuttons path="assessments[${status.index}].answers[4].answer" items="${answers}"/><br/>
                 </c:forEach>        
             </p>
              </tr>
              <tr>
             <p><h3>afspraken respecteren:</h3>
-                <c:forEach items="${pw.peerassesments}" var="peer" varStatus="status">
+                <c:forEach items="${wrapper.assessments}" var="peer" varStatus="status">
                     <p>${peer.voor.name}</p>
-                    <form:radiobuttons path="peerassesments[${status.index}].antwoorden[5].antwoord" items="${antwoorden}"/><br/>
+                    <form:radiobuttons path="assessments[${status.index}].answers[5].answer" items="${answers}"/><br/>
                 </c:forEach>        
             </p>
              </tr>
@@ -65,7 +65,7 @@
                 <input type="submit" value="save"/>           
             </p>
             <p>
-                <input type="submit" value="bevestig" />           
+                <input type="submit" value="confirm" />           
             </p>
 
         </form:form>
