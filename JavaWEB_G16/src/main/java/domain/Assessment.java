@@ -25,7 +25,7 @@ import javax.persistence.OneToOne;
  */
 @Entity
 @NamedQueries({
-    @NamedQuery(name = "Assesment.getById", query = "SELECT p FROM Assessment p WHERE p.forCoursemember.id = :id")})
+    @NamedQuery(name = "Assessment.getById", query = "SELECT p FROM Assessment p WHERE p.forCoursemember.id = :id")})
 public class Assessment implements Serializable{
 
     private static final long serialVersionUID = 1L;
